@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #fdfbfb, #ebedee);
@@ -5,7 +10,7 @@ body {
     padding: 50px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -31,6 +36,7 @@ input {
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 button {
@@ -50,5 +56,59 @@ button:hover {
 }
 
 .resultado {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+.resultado.visivel {
+    display: block;
+    opacity: 1;
+}
+
+.resultado img {
+    display: block;
+    margin: 15px auto;
+    width: 120px;
+}
+
+.resultado h2 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.resultado p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Estilo especial para cada tipo de Pokémon */
+
+.tipo {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Cores por tipo (pode expandir depois!) */
+.tipo-fogo { background-color: #ee8130; }
+.tipo-agua { background-color: #6390f0; }
+.tipo-grama { background-color: #7ac74c; }
+.tipo-eletrico { background-color: #f7d02c; }
+.tipo-psiquico { background-color: #f95587; }
+.tipo-gelo { background-color: #96d9d6; }
+.tipo-dragao { background-color: #6f35fc; }
+.tipo-sombrio { background-color: #705746; }
+.tipo-fada { background-color: #d685ad; }
+.tipo-fogo { background-color: #ee8130; }
+.tipo-agua { background-color: #6390f0; }
+.tipo-grama { background-color: #7ac74c; }
